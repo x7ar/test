@@ -56,7 +56,18 @@ function change() {
     // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
   }
 }
+var text_bpm = [""];
+var counter_bpm = 0;
+var elem_bpm = document.getElementById("myBPM");
 
+function change() {
+  elem_bpm.innerHTML = text_bpm[counter_bpm];
+  counter_bpm++;
+  if (counter_bpm >= text.length) {
+    counter_bpm = 0;
+    // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+  }
+}
    </script>
 </div>
 <body>
