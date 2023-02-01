@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {box-sizing:border-box;}
+        body{background-color: rgb(230, 235, 222);}
+        .column {float: left;width: 25%;padding: 0 10px;}
+        .row {margin: 0 -5px;}
+        .row {margin: 0 -5px;}
+         @media screen and (max-width: 600px) {                                      
+  .column {width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}}                 
+  .heading{text-align: center;color: rgb(44, 44, 44)}
+  .card {margin-top: 40%;box-shadow: 0 20px 10px 0 rgba(0, 0, 0, 0.2);padding: 16px;padding-bottom: 15%;text-align: center ;border-top-right-radius: 30%;border-bottom-left-radius: 30%;background-color: rgb(155,193,188);color: white;}
+
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<div class="heading">
+      <h1>Made by SPOE</h1>     
+        <div class='column'>                                                      
+  <div id="card" class='card'>                                                          
+  <h3>Body Temperature</h3>                                                   
+  <img src='https://cdn.iconscout.com/icon/free/png-256/temperature-1575480-1331753.png' alt='bodytemp' width='45%'>       
+  <br>                                                                       
+  <h3 id="BodyTemp"></h3>                                                 
+   </div>                                                                   
+   </div>                                                                   
+            <div class='column'>                                                   
+  <div class='card'>                                                          
+  <h3>Heart Rate</h3>                                                      
+  <img src='https://cdn.iconscout.com/icon/free/png-256/heart-beat-21-1118106.png' alt='heartrate' width='45%'>              
+  <br>                                                                     
+  <h3 id="myBPM"></h3>                                                     
+  </div>                                                                       
+  </div>                                                                      
+        
+   <script>
+    var text = ["40", "-10°C", "30°C" , "19°C"];
+var counter = 0;
+var elem = document.getElementById("BodyTemp");
+var inst = setInterval(change, 2000);
+
+function change() {
+  elem.innerHTML = text[counter];
+  counter++;
+  if (counter >= text.length) {
+    counter = 0;
+    // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+  }
+}
+
+   </script>
+</div>
+<body>
+    
+</body>
+</html>
